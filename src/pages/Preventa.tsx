@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Pagina } from '../components/Navegacion';
 import { validarCorreo } from '../lib/institucional';
 
-const API = import.meta.env.VITE_PREVENTA_API as string | undefined;
+// Endpoint en Vercel. Se puede sobrescribir con VITE_PREVENTA_API.
+const API = import.meta.env.VITE_PREVENTA_API || 'https://de-raiz.vercel.app/api/preventa';
 
 type Estado = 'formulario' | 'enviando' | 'listo';
 
@@ -19,7 +20,6 @@ export default function Preventa() {
     if (estado === 'enviando') return;
     const v = validarCorreo(correo);
     if (!v.ok) { setError(v.error); return; }
-    if (!API) { setError('La preventa todavía no está conectada. Vuelve en unos días.'); return; }
     setError('');
     setEstado('enviando');
     try {

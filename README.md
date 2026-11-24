@@ -2,7 +2,8 @@
 
 Sitio público de **De Raíz**: un kit universitario (tote patchwork, base para laptop y libreta) hecho con retazos, cartón, papel y plástico rescatados.
 
-**En vivo:** https://facu100201.github.io/De-Ra-z/
+**En vivo:** https://facu100201.github.io/De-Ra-z/  
+**API de preventa:** https://de-raiz.vercel.app/api/preventa
 
 ## Qué incluye
 
@@ -40,11 +41,9 @@ npm run build      # genera dist/ (incluye 404.html para las rutas en Pages)
 
 ### Frontend → GitHub Pages
 
-Cada push a `main` corre `.github/workflows/pages.yml`, que compila y publica en Pages.
+Cada push a `main` corre `.github/workflows/pages.yml`: compila el sitio y lo publica en la rama `gh-pages`, que es la fuente de Pages.
 
-Para activarlo la primera vez, ve a **Settings → Pages → Source: GitHub Actions**.
-
-Configura estas variables del repo en **Settings → Secrets and variables → Actions → Variables**:
+Variables opcionales del repo, en **Settings → Secrets and variables → Actions → Variables**:
 
 | Variable | Ejemplo |
 | --- | --- |
@@ -53,12 +52,13 @@ Configura estas variables del repo en **Settings → Secrets and variables → A
 
 ### API de correo → Vercel (plan gratis)
 
-GitHub Pages solo sirve archivos estáticos, así que el envío de correo vive en Vercel:
+GitHub Pages solo sirve archivos estáticos, así que el envío de correo vive en el proyecto `de-raiz` de Vercel, ligado a este repo. Se despliega solo con cada push a `main`. Ya tiene configuradas `SITE_URL`, `ALLOWED_ORIGINS` y `VITE_BASE`.
 
-1. Crea una cuenta en Resend y verifica tu dominio, para mandar desde `hola@tudominio`. `onboarding@resend.dev` solo sirve para pruebas a tu propio correo.
-2. Importa este repo en Vercel y configura las variables de `.env.example`: `RESEND_API_KEY`, `FROM_EMAIL`, `SITE_URL` y `ALLOWED_ORIGINS`.
-3. Opcional: conecta Neon desde el Marketplace de Vercel (agrega `DATABASE_URL`) y corre `db/schema.sql`. Con eso se guardan los registros y nadie recibe el correo dos veces.
-4. Copia la URL de `/api/preventa` en la variable `VITE_PREVENTA_API` del repo y vuelve a correr el workflow.
+Para que mande correos falta:
+
+1. Crear una cuenta en Resend y verificar tu dominio, para mandar desde `hola@tudominio`. `onboarding@resend.dev` solo sirve para pruebas a tu propio correo.
+2. En Vercel → `de-raiz` → Settings → Environment Variables, agregar `RESEND_API_KEY` y `FROM_EMAIL` (p. ej. `De Raíz <hola@tudominio>`), y opcionalmente `REPLY_TO` y `NOTIFY_TO`. Después, Redeploy.
+3. Opcional: conectar Neon desde el Marketplace de Vercel (agrega `DATABASE_URL`) y correr `db/schema.sql`. Con eso se guardan los registros y nadie recibe el correo dos veces.
 
 El correo valida que el dominio sea institucional (`.edu`, `.edu.mx`, `unam.mx`, `ipn.mx`, `uam.mx`, `tec.mx`, `ibero.mx` y otros). Si el correo trae un nombre (`valeria.ruiz@…`), saluda por nombre y menciona la universidad.
 

@@ -4,7 +4,7 @@ import { Pagina } from '../components/Navegacion';
 import { validarCorreo } from '../lib/institucional';
 
 // Endpoint en Vercel. Se puede sobrescribir con VITE_PREVENTA_API.
-const API = import.meta.env.VITE_PREVENTA_API || 'https://de-raiz.vercel.app/api/preventa';
+const API = import.meta.env.VITE_PREVENTA_API || 'https://de-raiz-beta.vercel.app/api/preventa';
 
 type Estado = 'formulario' | 'enviando' | 'listo';
 

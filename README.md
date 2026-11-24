@@ -3,7 +3,7 @@
 Sitio público de **De Raíz**: un kit universitario (tote patchwork, base para laptop y libreta) hecho con retazos, cartón, papel y plástico rescatados.
 
 **En vivo:** https://facu100201.github.io/De-Ra-z/  
-**API de preventa:** https://de-raiz.vercel.app/api/preventa
+**API de preventa:** https://de-raiz-beta.vercel.app/api/preventa
 
 ## Qué incluye
 

@@ -1,4 +1,5 @@
 import { useState, type CSSProperties } from 'react';
+import Marquee from '../components/Marquee';
 import { logoCompleto, Pagina } from '../components/Navegacion';
 
 const CONTACTO = import.meta.env.VITE_CONTACTO ?? 'hola@deraiz.mx';
@@ -11,12 +12,18 @@ const politicas = [
   { t: 'Aviso de privacidad', d: 'En la preventa solo pedimos tu correo institucional. Lo usamos para confirmarte tu registro y avisarte cuando arranque la producción; no lo compartimos ni lo vendemos. Si quieres que lo borremos, escríbenos y lo eliminamos.' }
 ];
 
-const valores = (
-  <span style={{ paddingRight: 28 }}>
-    Sustentabilidad <span style={{ color: '#2FA154' }}>●</span> Creatividad <span style={{ color: '#D69A12' }}>●</span> Calidad <span style={{ color: '#0B6A86' }}>●</span> Responsabilidad{' '}
-    <span style={{ color: '#5B3FC4' }}>●</span> Colaboración <span style={{ color: '#C2410C' }}>●</span> Conciencia <span style={{ color: '#5E8E12' }}>●</span>{' '}
-  </span>
-);
+const valores = [
+  ['Sustentabilidad', '#2FA154'],
+  ['Creatividad', '#D69A12'],
+  ['Calidad', '#0B6A86'],
+  ['Responsabilidad', '#5B3FC4'],
+  ['Colaboración', '#C2410C'],
+  ['Conciencia', '#5E8E12']
+].map(([v, c]) => (
+  <>
+    {v} <span style={{ color: c, fontSize: '0.7em', verticalAlign: '0.12em' }}>●</span>
+  </>
+));
 
 export default function Nosotros() {
   const [abierta, setAbierta] = useState(-1);
@@ -52,12 +59,14 @@ export default function Nosotros() {
         </div>
       </section>
 
-      <div style={{ borderTop: '1px solid rgba(16,48,31,.12)', borderBottom: '1px solid rgba(16,48,31,.12)', overflow: 'hidden' }}>
-        <h2 className="sr-only">Valores: sustentabilidad, creatividad, calidad, responsabilidad, colaboración y conciencia</h2>
-        <div className="mq" aria-hidden="true" style={{ display: 'flex', width: 'max-content', padding: '14px 0', fontSize: 'clamp(20px, 4.4vw, 28px)', letterSpacing: '-.025em', whiteSpace: 'nowrap', animationDuration: '36s' }}>
-          {valores}{valores}
-        </div>
-      </div>
+      <h2 className="sr-only">Valores</h2>
+      <Marquee
+        items={valores}
+        sep=""
+        label="Valores: sustentabilidad, creatividad, calidad, responsabilidad, colaboración y conciencia."
+        duration={50}
+        style={{ padding: '14px 0', fontSize: 'clamp(20px, 4.4vw, 28px)', letterSpacing: '-.025em' }}
+      />
 
       <section id="politicas" className="sec" style={{ maxWidth: 760, margin: '0 auto', paddingLeft: 20, paddingRight: 20, scrollMarginTop: 90 }}>
         <h2 className="h2 rv" style={{ marginBottom: 16 }}>Políticas de compra.</h2>

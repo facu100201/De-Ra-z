@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import Arte, { type Pieza } from '../components/Arte';
 import CiudadFondo from '../components/CiudadFondo';
+import Marquee from '../components/Marquee';
 import { BarraMovil, Pagina } from '../components/Navegacion';
 
 const piezas: { id: Pieza; nombre: string; sub: string; delay: string }[] = [
@@ -17,12 +18,16 @@ const pasos = [
   { n: '04', t: 'Nos lo regresas.', c: '#5B3FC4', gt: true }
 ];
 
-const marquee = (
-  <span style={{ paddingRight: 32 }}>
-    Retazos <span style={{ color: 'var(--green)' }}>→ Tote bag</span> · Cartón <span style={{ color: 'var(--green)' }}>→ Pastas</span> · Papel{' '}
-    <span style={{ color: 'var(--green)' }}>→ Libreta</span> · Plástico <span style={{ color: 'var(--green)' }}>→ Base laptop</span> ·{' '}
-  </span>
-);
+const materiales = [
+  ['Retazos', 'Tote bag'],
+  ['Cartón', 'Pastas'],
+  ['Papel', 'Libreta'],
+  ['Plástico', 'Base laptop']
+].map(([de, a]) => (
+  <>
+    {de} <span style={{ color: 'var(--green)' }}>→ {a}</span>
+  </>
+));
 
 const bub = (s: CSSProperties & { '--p'?: string }) => <div className="bub px" aria-hidden="true" style={s as CSSProperties} />;
 
@@ -45,12 +50,13 @@ export default function Inicio() {
         <div aria-hidden="true" style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 70, zIndex: 1, pointerEvents: 'none', background: 'linear-gradient(180deg, rgba(244,250,242,0), var(--page))' }} />
       </section>
 
-      <div style={{ borderTop: '1px solid rgba(16,48,31,.12)', borderBottom: '1px solid rgba(16,48,31,.12)', overflow: 'hidden', background: 'rgba(255,255,255,.45)' }}>
-        <p className="sr-only">Retazos se vuelven tote bag; cartón, pastas; papel, libreta; plástico, base para laptop.</p>
-        <div className="mq" aria-hidden="true" style={{ display: 'flex', width: 'max-content', padding: '12px 0', fontSize: 17, letterSpacing: '-.01em', whiteSpace: 'nowrap' }}>
-          {marquee}{marquee}
-        </div>
-      </div>
+      <Marquee
+        items={materiales}
+        label="Retazos se vuelven tote bag; cartón, pastas; papel, libreta; plástico, base para laptop."
+        duration={60}
+        repeat={6}
+        style={{ background: 'rgba(255,255,255,.45)', padding: '12px 0', fontSize: 17, letterSpacing: '-.01em' }}
+      />
 
       <section className="wrap sec" style={{ position: 'relative', textAlign: 'center' }}>
         {bub({ '--p': '100px', width: 60, height: 60, left: '6%', top: 40 })}

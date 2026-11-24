@@ -1,9 +1,9 @@
 import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import Arte, { type Pieza } from '../components/Arte';
-import CiudadFondo from '../components/CiudadFondo';
 import Marquee from '../components/Marquee';
-import { BarraMovil, Pagina } from '../components/Navegacion';
+import { Pagina } from '../components/Navegacion';
+import ScrollExpand from '../components/ScrollExpand';
 
 const piezas: { id: Pieza; nombre: string; sub: string; delay: string }[] = [
   { id: 'tote', nombre: 'Tote patchwork', sub: 'Retazos de mezclilla y algodón', delay: '0s' },
@@ -12,10 +12,10 @@ const piezas: { id: Pieza; nombre: string; sub: string; delay: string }[] = [
 ];
 
 const pasos = [
-  { n: '01', t: 'Separas.', c: '#1A763C' },
-  { n: '02', t: 'Recuperamos.', c: '#0B6A86' },
-  { n: '03', t: 'Transformamos.', c: '#B4560B' },
-  { n: '04', t: 'Nos lo regresas.', c: '#5B3FC4', gt: true }
+  { n: '01', t: 'Separas.', c: '#2F6B3A' },
+  { n: '02', t: 'Recuperamos.', c: '#8A6236' },
+  { n: '03', t: 'Transformamos.', c: '#A4561A' },
+  { n: '04', t: 'Nos lo regresas.', c: '#5E7A3A', gt: true }
 ];
 
 const materiales = [
@@ -33,29 +33,27 @@ const bub = (s: CSSProperties & { '--p'?: string }) => <div className="bub px" a
 
 export default function Inicio() {
   return (
-    <Pagina sky={false} barraEnHero>
-      <section style={{ position: 'relative', overflow: 'hidden', minHeight: 'max(620px, min(90svh, 800px))', display: 'flex', flexDirection: 'column' }}>
-        <CiudadFondo />
-        <BarraMovil />
-        <div className="nav-d" aria-hidden="true" style={{ height: 68 }} />
-        <div className="wrap" style={{ position: 'relative', zIndex: 1, paddingTop: 24, display: 'flex', flexDirection: 'column', gap: 16 }}>
-          <p className="ey" style={{ color: '#0F5427' }}>Kit universitario, hecho en la CDMX</p>
-          <h1 className="display" style={{ maxWidth: 600 }}>Lo que tiras puede tener una segunda vida.</h1>
-          <p className="lead" style={{ color: '#1D3D2B', maxWidth: 360 }}>Tote, base para laptop y libreta, hechas con material rescatado.</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 18, marginTop: 4 }}>
-            <Link className="btn" to="/preventa">Aparta tu kit</Link>
-            <Link className="lk" to="/kit">Ver el kit</Link>
-          </div>
+    <Pagina sky={false} flush>
+      <ScrollExpand
+        src={`${import.meta.env.BASE_URL}hero.webp`}
+        alt="Bolsa de papel kraft, hojas verdes, frascos de vidrio ámbar y un sobre sobre un fondo verde claro"
+        scrollHint="Desliza para abrir"
+        title={<h1 className="display" style={{ maxWidth: 640 }}>Lo que tiras puede tener una segunda vida.</h1>}
+      >
+        <p className="ey" style={{ color: 'var(--leaf-dark)' }}>Kit universitario, hecho en la CDMX</p>
+        <h2 className="h2" style={{ maxWidth: 560, marginTop: 12 }}>Tote, base para laptop y libreta, hechas con material rescatado.</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 18, marginTop: 24 }}>
+          <Link className="btn" to="/preventa">Aparta tu kit</Link>
+          <Link className="lk" to="/kit">Ver el kit</Link>
         </div>
-        <div aria-hidden="true" style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 70, zIndex: 1, pointerEvents: 'none', background: 'linear-gradient(180deg, rgba(244,250,242,0), var(--page))' }} />
-      </section>
+      </ScrollExpand>
 
       <Marquee
         items={materiales}
         label="Retazos se vuelven tote bag; cartón, pastas; papel, libreta; plástico, base para laptop."
         duration={60}
         repeat={6}
-        style={{ background: 'rgba(255,255,255,.45)', padding: '12px 0', fontSize: 17, letterSpacing: '-.01em' }}
+        style={{ background: 'var(--paper)', padding: '12px 0', fontSize: 17, letterSpacing: '-.01em' }}
       />
 
       <section className="wrap sec" style={{ position: 'relative', textAlign: 'center' }}>

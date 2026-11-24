@@ -13,12 +13,12 @@ const politicas = [
 ];
 
 const valores = [
-  ['Sustentabilidad', '#2FA154'],
-  ['Creatividad', '#D69A12'],
-  ['Calidad', '#0B6A86'],
-  ['Responsabilidad', '#5B3FC4'],
-  ['Colaboración', '#C2410C'],
-  ['Conciencia', '#5E8E12']
+  ['Sustentabilidad', '#2F6B3A'],
+  ['Creatividad', '#B98B57'],
+  ['Calidad', '#8A6236'],
+  ['Responsabilidad', '#5E7A3A'],
+  ['Colaboración', '#A4561A'],
+  ['Conciencia', '#7FA35A']
 ].map(([v, c]) => (
   <>
     {v} <span style={{ color: c, fontSize: '0.7em', verticalAlign: '0.12em' }}>●</span>
@@ -84,7 +84,7 @@ export default function Nosotros() {
                     style={{ width: '100%', minHeight: 52, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '10px 0', border: 0, background: 'transparent', cursor: 'pointer', textAlign: 'left', font: '500 var(--fs-md)/1.3 var(--font)', color: 'var(--ink)' }}
                   >
                     <span>{p.t}</span>
-                    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A763C" strokeWidth="1.5" strokeLinecap="round" style={{ flex: 'none', transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .25s ease' }}><path d="M5 12h14M12 5v14" /></svg>
+                    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F6B3A" strokeWidth="1.5" strokeLinecap="round" style={{ flex: 'none', transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .25s ease' }}><path d="M5 12h14M12 5v14" /></svg>
                   </button>
                 </h3>
                 {open && <p id={`pol-${i}`} className="inn" style={{ padding: '0 0 16px', fontSize: 'var(--fs-base)', lineHeight: 1.55, color: 'var(--ink-2)', maxWidth: 600 }}>{p.d}</p>}

@@ -62,7 +62,7 @@ export default function Preventa() {
                 aria-invalid={error ? true : undefined}
                 value={correo}
                 onChange={(e) => { setCorreo(e.target.value); setError(''); }}
-                style={{ flex: '1 1 240px', minHeight: 44, padding: '0 18px', borderRadius: 999, border: `1px solid ${error ? '#C2410C' : 'rgba(16,48,31,.18)'}`, background: 'rgba(255,255,255,.85)', font: '400 var(--fs-base) var(--font)', color: 'var(--ink)', boxShadow: '0 6px 18px rgba(14,72,70,.07)' }}
+                style={{ flex: '1 1 240px', minHeight: 44, padding: '0 18px', borderRadius: 999, border: `1px solid ${error ? '#C2410C' : 'rgba(28,46,34,.18)'}`, background: 'rgba(255,255,255,.85)', font: '400 var(--fs-base) var(--font)', color: 'var(--ink)', boxShadow: '0 6px 18px rgba(28,46,34,.07)' }}
               />
               <button type="submit" className="btn" disabled={estado === 'enviando'} style={{ flex: '1 1 130px' }}>
                 {estado === 'enviando' ? 'Enviando…' : 'Apartar mi kit'}
@@ -77,8 +77,8 @@ export default function Preventa() {
         </section>
       ) : (
         <section className="sec" style={{ maxWidth: 560, margin: '0 auto', paddingLeft: 20, paddingRight: 20, display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'center', textAlign: 'center' }}>
-          <div className="pop" aria-hidden="true" style={{ width: 72, height: 72, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1.5px solid var(--green)', background: 'rgba(47,161,84,.08)', marginBottom: 6 }}>
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1A763C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7l9 6 9-6M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" /></svg>
+          <div className="pop" aria-hidden="true" style={{ width: 72, height: 72, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1.5px solid var(--green)', background: 'rgba(47,107,58,.07)', marginBottom: 6 }}>
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F6B3A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 7l9 6 9-6M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" /></svg>
           </div>
           <h1 className="display">{yaEstaba ? 'Ya estabas en la lista.' : 'Revisa tu correo.'}</h1>
           <p role="status" className="lead" style={{ maxWidth: 460 }}>

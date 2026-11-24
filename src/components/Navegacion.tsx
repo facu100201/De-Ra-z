@@ -16,9 +16,9 @@ const secciones: { id: Seccion; label: string; to: string; d: string }[] = [
 ];
 
 const glass: CSSProperties = {
-  background: 'rgba(255,255,255,.74)',
+  background: 'rgba(248,249,242,.82)',
   border: '1px solid rgba(255,255,255,.95)',
-  boxShadow: '0 12px 32px rgba(14,72,70,.12), inset 0 1px 0 #fff',
+  boxShadow: '0 12px 32px rgba(28,46,34,.12), inset 0 1px 0 #fff',
   backdropFilter: 'blur(18px) saturate(1.3)',
   WebkitBackdropFilter: 'blur(18px) saturate(1.3)'
 };
@@ -56,9 +56,9 @@ export function BarraDesktop({ superpuesta = false }: { superpuesta?: boolean })
                   style={({ isActive }) => ({
                     display: 'inline-flex', alignItems: 'center', minHeight: 38, padding: '0 14px', borderRadius: 999,
                     fontSize: 'var(--fs-sm)', textDecoration: 'none',
-                    color: isActive ? 'var(--green-dark)' : '#2e4a3c',
+                    color: isActive ? 'var(--green-dark)' : '#3a4d3f',
                     fontWeight: isActive ? 500 : 400,
-                    background: isActive ? 'rgba(47,161,84,.12)' : 'transparent'
+                    background: isActive ? 'rgba(47,107,58,.1)' : 'transparent'
                   })}
                 >
                   {s.label}
@@ -77,7 +77,7 @@ export function BarraDesktop({ superpuesta = false }: { superpuesta?: boolean })
 export function Dock() {
   return (
     <div className="dock" style={{ position: 'sticky', bottom: 12, zIndex: 20, display: 'flex', justifyContent: 'center', padding: '0 12px 12px' }}>
-      <nav aria-label="Secciones" style={{ ...glass, width: 340, maxWidth: '100%', padding: 5, borderRadius: 999, display: 'flex', gap: 2, background: 'linear-gradient(180deg, rgba(255,255,255,.9), rgba(232,247,250,.72))' }}>
+      <nav aria-label="Secciones" style={{ ...glass, width: 340, maxWidth: '100%', padding: 5, borderRadius: 999, display: 'flex', gap: 2, background: 'linear-gradient(180deg, rgba(248,249,242,.94), rgba(238,242,227,.8))' }}>
         {secciones.map((s) => (
           <NavLink
             key={s.id}
@@ -86,8 +86,8 @@ export function Dock() {
             style={({ isActive }) => ({
               flex: '1 1 0', minWidth: 0, minHeight: 48, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
               gap: 2, borderRadius: 999, textDecoration: 'none', fontSize: 10.5, letterSpacing: '.01em',
-              color: isActive ? 'var(--green-dark)' : '#4a6656',
-              background: isActive ? 'rgba(47,161,84,.12)' : 'transparent'
+              color: isActive ? 'var(--green-dark)' : '#56685a',
+              background: isActive ? 'rgba(47,107,58,.1)' : 'transparent'
             })}
           >
             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={s.d} /></svg>
@@ -102,7 +102,7 @@ export function Dock() {
 export function Pie() {
   const link: CSSProperties = { minHeight: 36, display: 'inline-flex', alignItems: 'center', fontSize: 'var(--fs-sm)', color: 'var(--ink)', textDecoration: 'none' };
   return (
-    <footer style={{ borderTop: '1px solid rgba(16,48,31,.12)', padding: '32px 0 24px' }}>
+    <footer style={{ borderTop: '1px solid rgba(28,46,34,.12)', padding: '32px 0 24px' }}>
       <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 20, alignItems: 'center', justifyContent: 'space-between' }}>
           <img src={logo} alt="De Raíz" style={{ height: 26, width: 'auto' }} />
@@ -122,9 +122,9 @@ export function Pie() {
 }
 
 /** Estructura común: navbar desktop, contenido, pie y dock móvil */
-export function Pagina({ children, sky = true, barraEnHero = false }: { children: ReactNode; sky?: boolean; barraEnHero?: boolean }) {
+export function Pagina({ children, sky = true, barraEnHero = false, flush = false }: { children: ReactNode; sky?: boolean; barraEnHero?: boolean; flush?: boolean }) {
   return (
-    <div className={sky ? 'page page--sky' : 'page'}>
+    <div className={['page', sky && 'page--sky', flush && 'page--flush'].filter(Boolean).join(' ')}>
       <a href="#contenido" className="sr-only">Saltar al contenido</a>
       <BarraDesktop superpuesta={barraEnHero} />
       {!barraEnHero && <BarraMovil />}

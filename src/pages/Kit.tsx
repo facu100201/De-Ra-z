@@ -22,7 +22,7 @@ export default function Kit() {
   return (
     <Pagina>
       <div className="wrap" style={{ paddingTop: 8 }}>
-        <div role="group" aria-label="Elige una pieza" style={{ display: 'flex', gap: 2, padding: 4, borderRadius: 999, maxWidth: 360, background: 'linear-gradient(180deg, rgba(255,255,255,.9), rgba(232,247,250,.7))', border: '1px solid #fff', boxShadow: '0 10px 26px rgba(14,72,70,.14), inset 0 1px 0 #fff' }}>
+        <div role="group" aria-label="Elige una pieza" style={{ display: 'flex', gap: 2, padding: 4, borderRadius: 999, maxWidth: 360, background: 'linear-gradient(180deg, rgba(255,255,255,.92), rgba(238,242,227,.75))', border: '1px solid #fff', boxShadow: '0 10px 26px rgba(28,46,34,.14), inset 0 1px 0 #fff' }}>
           {ids.map((id) => {
             const on = id === sel;
             return (
@@ -42,7 +42,7 @@ export default function Kit() {
 
       <section className="wrap" style={{ padding: '16px 20px var(--sp-section)', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '16px 48px' }}>
         <div style={{ flex: '1 1 300px', position: 'relative', display: 'flex', justifyContent: 'center', padding: '16px 0' }}>
-          <div aria-hidden="true" style={{ position: 'absolute', left: '50%', top: '50%', width: 'min(80%, 340px)', aspectRatio: '1', transform: 'translate(-50%, -50%)', borderRadius: '50%', background: 'radial-gradient(circle at 34% 26%, #FFFFFF 0 10%, #DDF4FA 38%, #A9E0F2 75%, #8DD3EC 100%)', boxShadow: 'inset 0 -20px 40px rgba(14,106,134,.18), 0 40px 80px rgba(14,106,134,.18)' }} />
+          <div aria-hidden="true" style={{ position: 'absolute', left: '50%', top: '50%', width: 'min(80%, 340px)', aspectRatio: '1', transform: 'translate(-50%, -50%)', borderRadius: '50%', background: 'radial-gradient(circle at 34% 26%, #FFFFFF 0 10%, #EEF2E3 40%, #D5E3BE 78%, #C3D6A4 100%)', boxShadow: 'inset 0 -18px 36px rgba(47,107,58,.14), 0 30px 60px rgba(47,107,58,.14)' }} />
           <div className="bub px" aria-hidden="true" style={{ '--p': '50px', width: 38, height: 38, left: '6%', top: '6%' } as CSSProperties} />
           <div className="bub px" aria-hidden="true" style={{ '--p': '90px', width: 22, height: 22, right: '10%', bottom: '14%' } as CSSProperties} />
           <div key={sel} className="fl inn" style={{ position: 'relative', width: 'min(58%, 260px)' }}><Arte pieza={sel} /></div>

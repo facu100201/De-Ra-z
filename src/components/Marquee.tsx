@@ -34,7 +34,7 @@ export default function Marquee({ items, label, sep = '·', duration = 40, repea
   );
 
   return (
-    <div style={{ borderTop: '1px solid rgba(16,48,31,.12)', borderBottom: '1px solid rgba(16,48,31,.12)', overflow: 'hidden', ...style }}>
+    <div style={{ borderTop: '1px solid rgba(28,46,34,.12)', borderBottom: '1px solid rgba(28,46,34,.12)', overflow: 'hidden', ...style }}>
       <p className="sr-only">{label}</p>
       <div className="mq" aria-hidden="true" style={{ display: 'flex', width: 'max-content', whiteSpace: 'nowrap', animationDuration: `${duration}s` }}>
         {mitad('a')}

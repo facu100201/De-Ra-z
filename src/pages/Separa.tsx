@@ -54,14 +54,14 @@ export default function Separa() {
 
         {!finished ? (
           <div style={{ width: '100%', maxWidth: 520, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 22, marginTop: 14 }}>
-            <p key={idx} className="fl inn" style={{ padding: '12px 22px', borderRadius: 999, fontSize: 'clamp(20px, 4.4vw, 26px)', fontWeight: 500, letterSpacing: '-.025em', lineHeight: 1.2, background: 'linear-gradient(180deg, rgba(255,255,255,.92), rgba(232,247,250,.7))', border: '1px solid #fff', boxShadow: '0 10px 26px rgba(14,72,70,.12), inset 0 1px 0 #fff' }}>
+            <p key={idx} className="fl inn" style={{ padding: '12px 22px', borderRadius: 999, fontSize: 'clamp(20px, 4.4vw, 26px)', fontWeight: 500, letterSpacing: '-.025em', lineHeight: 1.2, background: 'linear-gradient(180deg, rgba(255,255,255,.94), rgba(238,242,227,.78))', border: '1px solid #fff', boxShadow: '0 10px 26px rgba(28,46,34,.12), inset 0 1px 0 #fff' }}>
               {item.name}
             </p>
             <div role="group" aria-label="Elige un bote" style={{ width: '100%', display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 8 }}>
               {botes.map((b) => {
                 const isPicked = picked === b.id;
                 const isRight = answered && b.id === item.bin;
-                const ring = isRight ? '0 0 0 3px #fff, 0 0 0 5px #1A763C, ' : isPicked ? '0 0 0 3px #fff, 0 0 0 5px #C2410C, ' : '';
+                const ring = isRight ? '0 0 0 3px #fff, 0 0 0 5px #2F6B3A, ' : isPicked ? '0 0 0 3px #fff, 0 0 0 5px #C2410C, ' : '';
                 return (
                   <button
                     key={b.id}
@@ -70,7 +70,7 @@ export default function Separa() {
                     disabled={answered}
                     style={{ minHeight: 108, padding: '6px 4px', border: 0, background: 'transparent', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, color: 'var(--ink)', cursor: answered ? 'default' : 'pointer', opacity: answered && !isRight && !isPicked ? 0.4 : 1, transition: 'opacity .2s', fontSize: 'var(--fs-sm)', fontWeight: 500 }}
                   >
-                    <span aria-hidden="true" style={{ width: 'min(68px, 19vw)', aspectRatio: '1', borderRadius: '50%', background: `radial-gradient(circle at 35% 28%, #fff 0 6%, ${b.c1} 22%, ${b.c2} 72%)`, boxShadow: `${ring}inset 0 -6px 10px rgba(0,0,0,.2), inset 0 5px 7px rgba(255,255,255,.5), 0 8px 18px rgba(16,48,31,.18)`, transform: isRight ? 'scale(1.08)' : 'none', transition: 'transform .35s cubic-bezier(.2,1.4,.4,1), box-shadow .2s' }} />
+                    <span aria-hidden="true" style={{ width: 'min(68px, 19vw)', aspectRatio: '1', borderRadius: '50%', background: `radial-gradient(circle at 35% 28%, #fff 0 6%, ${b.c1} 22%, ${b.c2} 72%)`, boxShadow: `${ring}inset 0 -6px 10px rgba(0,0,0,.2), inset 0 5px 7px rgba(255,255,255,.5), 0 8px 18px rgba(28,46,34,.18)`, transform: isRight ? 'scale(1.08)' : 'none', transition: 'transform .35s cubic-bezier(.2,1.4,.4,1), box-shadow .2s' }} />
                     <span>{b.label}</span>
                   </button>
                 );
@@ -78,7 +78,7 @@ export default function Separa() {
             </div>
             {answered && (
               <div role="status" className="inn" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, maxWidth: 420 }}>
-                <p style={{ fontSize: 22, fontWeight: 500, letterSpacing: '-.03em', color: correct ? '#1A763C' : '#B4410B' }}>{correct ? '¡Exacto!' : 'Casi. Va en otro bote.'}</p>
+                <p style={{ fontSize: 22, fontWeight: 500, letterSpacing: '-.03em', color: correct ? '#2F6B3A' : '#B4410B' }}>{correct ? '¡Exacto!' : 'Casi. Va en otro bote.'}</p>
                 <p style={{ fontSize: 'var(--fs-base)', lineHeight: 1.5, color: 'var(--ink-2)' }}>{item.why}</p>
                 <button type="button" className="btn" onClick={() => { setIdx(idx + 1); setPicked(null); }}>{idx === total - 1 ? 'Ver mi resultado' : 'Siguiente'}</button>
               </div>
@@ -96,15 +96,15 @@ export default function Separa() {
         )}
       </section>
 
-      <section className="wrap" style={{ padding: '0 20px var(--sp-section)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0 32px' }}>
+      <section className="wrap" style={{ padding: '0 20px 56px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: '0 32px' }}>
         {guia.map((g) => (
           <div key={g.t} className="rv" style={{ padding: '14px 0 18px', borderTop: `2px solid ${g.c}` }}>
             <h2 className="h3">{g.t}</h2>
             <p style={{ marginTop: 6, fontSize: 'var(--fs-base)', lineHeight: 1.5, color: 'var(--ink-2)' }}>{g.d}</p>
           </div>
         ))}
-        <p className="small" style={{ gridColumn: '1 / -1', marginTop: 12 }}>Basado en la NADF-024-AMBT-2013. Revisa los días de recolección de tu alcaldía.</p>
       </section>
+      <p className="small wrap" style={{ marginTop: -40, paddingBottom: 'var(--sp-section)' }}>Basado en la NADF-024-AMBT-2013. Revisa los días de recolección de tu alcaldía.</p>
     </Pagina>
   );
 }

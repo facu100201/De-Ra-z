@@ -8,7 +8,7 @@ Sitio público de **De Raíz**: un kit universitario (tote patchwork, base para 
 ## Qué incluye
 
 - **Una sola app responsiva**, mobile first. Debajo de 960 px hay un dock de navegación abajo y desde 960 px una barra de vidrio fija arriba.
-- **Inicio** con una ciudad verde animada en three.js de fondo. Three.js se carga aparte, solo en esta página.
+- **Inicio** con un hero que se expande al hacer scroll (adaptado de Scroll Expand de React Bits, MIT + Commons Clause).
 - **El kit**: las tres piezas con material, qué residuo evitan y qué pasa con ellas al final.
 - **Preventa**: pide solo el correo institucional y manda un correo de confirmación personalizado.
 - **Separa bien**: mini juego para aprender a separar residuos según la NADF-024 de la CDMX.
@@ -16,12 +16,12 @@ Sitio público de **De Raíz**: un kit universitario (tote patchwork, base para 
 
 ## Stack
 
-React 19, TypeScript, Vite 6, React Router 7 y three.js. El envío de correo usa una función serverless (`api/preventa.ts`) con [Resend](https://resend.com). El registro en Postgres (Neon) es opcional.
+React 19, TypeScript, Vite 6 y React Router 7. El envío de correo usa una función serverless (`api/preventa.ts`) con [Resend](https://resend.com). El registro en Postgres (Neon) es opcional.
 
 ```
 src/
-  components/   Navegacion (barra, dock, pie), Arte (ilustraciones), CiudadFondo
-  lib/          escenaCiudad.ts (three.js), institucional.ts (validación de correo)
+  components/   Navegacion (barra, dock, pie), Arte, Marquee, ScrollExpand
+  lib/          institucional.ts (validación de correo)
   pages/        Inicio, Kit, Preventa, Separa, Ciclo, Nosotros
 api/
   preventa.ts   POST { email } → valida, registra y manda el correo
@@ -61,6 +61,18 @@ Para que mande correos falta:
 3. Opcional: conectar Neon desde el Marketplace de Vercel (agrega `DATABASE_URL`) y correr `db/schema.sql`. Con eso se guardan los registros y nadie recibe el correo dos veces.
 
 El correo valida que el dominio sea institucional (`.edu`, `.edu.mx`, `unam.mx`, `ipn.mx`, `uam.mx`, `tec.mx`, `ibero.mx` y otros). Si el correo trae un nombre (`valeria.ruiz@…`), saluda por nombre y menciona la universidad.
+
+## Paleta
+
+| Token | Color | Uso |
+| --- | --- | --- |
+| Pistache | `#EEF2E3` | Fondo |
+| Papel | `#F8F9F2` | Superficies, barra |
+| Salvia | `#D5E3BE` | Tintes y estados activos |
+| Hoja | `#2F6B3A` | Acción principal, links |
+| Musgo | `#1C2E22` | Texto |
+| Kraft | `#B98B57` | Acento cálido |
+| Ámbar | `#A4561A` | Detalle puntual |
 
 ## Licencia
 

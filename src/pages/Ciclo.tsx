@@ -5,17 +5,17 @@ import { Pagina } from '../components/Navegacion';
 const CONTACTO = import.meta.env.VITE_CONTACTO ?? 'hola@deraiz.mx';
 
 const nodos = [
-  { t: 'Separas', left: '50%', top: 38, bg: 'radial-gradient(circle at 35% 28%, #9BE3A9, #1F8243 70%)' },
-  { t: 'Recupe­ramos', left: 202, top: '50%', bg: 'radial-gradient(circle at 35% 28%, #9FE4F5, #0B6A86 70%)' },
-  { t: 'Transfor­mamos', left: '50%', top: 202, bg: 'radial-gradient(circle at 35% 28%, #F9DA8A, #B4560B 70%)' },
-  { t: 'Regresas', left: 38, top: '50%', bg: 'radial-gradient(circle at 35% 28%, #C7B6F7, #5B3FC4 70%)' }
+  { t: 'Separas', left: '50%', top: 38, bg: 'radial-gradient(circle at 35% 28%, #A9CF8F, #2F6B3A 70%)' },
+  { t: 'Recupe­ramos', left: 202, top: '50%', bg: 'radial-gradient(circle at 35% 28%, #E2C9A6, #8A6236 70%)' },
+  { t: 'Transfor­mamos', left: '50%', top: 202, bg: 'radial-gradient(circle at 35% 28%, #F0C38E, #A4561A 70%)' },
+  { t: 'Regresas', left: 38, top: '50%', bg: 'radial-gradient(circle at 35% 28%, #C9D7A8, #5E7A3A 70%)' }
 ];
 
 const pasos = [
-  { n: '01', c: '#1A763C', t: 'Tráelo a un punto De Raíz', d: 'En tu campus o en una entrega.' },
-  { n: '02', c: '#0B6A86', t: 'Primero, lo reparamos', d: 'Si una costura o un encastre tiene arreglo.' },
-  { n: '03', c: '#B4560B', t: 'Si no, lo separamos', d: 'Cada material va a su reciclaje.' },
-  { n: '04', c: '#5B3FC4', t: 'Te llevas un descuento', d: 'En tu siguiente kit.' }
+  { n: '01', c: '#2F6B3A', t: 'Tráelo a un punto De Raíz', d: 'En tu campus o en una entrega.' },
+  { n: '02', c: '#8A6236', t: 'Primero, lo reparamos', d: 'Si una costura o un encastre tiene arreglo.' },
+  { n: '03', c: '#A4561A', t: 'Si no, lo separamos', d: 'Cada material va a su reciclaje.' },
+  { n: '04', c: '#5E7A3A', t: 'Te llevas un descuento', d: 'En tu siguiente kit.' }
 ];
 
 export default function Ciclo() {
@@ -29,11 +29,11 @@ export default function Ciclo() {
         </div>
         <div style={{ flex: '1 1 260px', display: 'flex', justifyContent: 'center' }}>
           <div aria-hidden="true" style={{ position: 'relative', width: 240, height: 240 }}>
-            <div style={{ position: 'absolute', inset: 34, borderRadius: '50%', border: '2px dashed rgba(11,106,134,.35)' }} />
+            <div style={{ position: 'absolute', inset: 34, borderRadius: '50%', border: '2px dashed rgba(47,107,58,.3)' }} />
             <div className="fl" style={{ position: 'absolute', left: '50%', top: '50%', width: 88, margin: '-44px 0 0 -44px' }}><Arte pieza="tote" decorativa /></div>
             <div className="sp" style={{ position: 'absolute', inset: 0 }}>
               {nodos.map((n) => (
-                <div key={n.t} className="node" style={{ position: 'absolute', left: n.left, top: n.top, width: 68, height: 68, margin: '-34px 0 0 -34px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', fontSize: 10.5, fontWeight: 500, lineHeight: 1.1, color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.35)', background: n.bg, boxShadow: 'inset 0 -6px 10px rgba(0,0,0,.2), inset 0 5px 7px rgba(255,255,255,.5), 0 8px 16px rgba(16,48,31,.2)' }}>
+                <div key={n.t} className="node" style={{ position: 'absolute', left: n.left, top: n.top, width: 68, height: 68, margin: '-34px 0 0 -34px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', fontSize: 10.5, fontWeight: 500, lineHeight: 1.1, color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.35)', background: n.bg, boxShadow: 'inset 0 -6px 10px rgba(0,0,0,.2), inset 0 5px 7px rgba(255,255,255,.5), 0 8px 16px rgba(28,46,34,.2)' }}>
                   <span>{n.t}</span>
                 </div>
               ))}

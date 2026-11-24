@@ -1,0 +1,80 @@
+/* Adaptado de React Bits "Scroll Expand" (MIT + Commons Clause, © 2026 David Haz) */
+.scroll-expand__track { position: relative; width: 100%; }
+
+.scroll-expand__stage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-expand__frame {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(18% 21% 18% 21% round 28px);
+  will-change: clip-path;
+}
+
+.scroll-expand__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  transform-origin: center;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Velo claro: deja leer el texto oscuro sobre la foto */
+.scroll-expand__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 60% 55% at 50% 50%, rgba(238, 242, 227, 0.88), rgba(238, 242, 227, 0.55) 60%, rgba(238, 242, 227, 0) 100%);
+  opacity: 0;
+}
+
+.scroll-expand__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 88px 24px 96px;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+}
+
+.scroll-expand__title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  text-align: center;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+.scroll-expand__hint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(18% - 34px);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+  pointer-events: none;
+}
+
+@media (max-width: 699px) {
+  .scroll-expand__title { padding: 0 13%; }
+  .scroll-expand__hint { bottom: calc(25% - 34px); }
+}

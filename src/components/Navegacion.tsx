@@ -26,12 +26,12 @@ const glass: CSSProperties = {
 /** Barra superior en móvil: logo + Nosotros + Preventa */
 export function BarraMovil() {
   return (
-    <header className="nav-m wrap" style={{ paddingTop: 14, paddingBottom: 14, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, position: 'relative', zIndex: 2 }}>
+    <header className="nav-m wrap" style={{ paddingTop: 10, paddingBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, position: 'relative', zIndex: 2 }}>
       <Link to="/" aria-label="De Raíz, ir al inicio" style={{ display: 'flex', alignItems: 'center', minHeight: 44 }}>
-        <img src={logo} alt="De Raíz" style={{ height: 38, width: 'auto' }} />
+        <img src={logo} alt="De Raíz" style={{ height: 30, width: 'auto' }} />
       </Link>
       <nav aria-label="Principal" style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-        <Link to="/nosotros" style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, padding: '0 12px', fontSize: 15, color: 'var(--ink)', textDecoration: 'none' }}>Nosotros</Link>
+        <Link to="/nosotros" style={{ display: 'inline-flex', alignItems: 'center', minHeight: 40, padding: '0 10px', fontSize: 'var(--fs-sm)', color: 'var(--ink)', textDecoration: 'none' }}>Nosotros</Link>
         <Link to="/preventa" className="btn btn--sm">Preventa</Link>
       </nav>
     </header>
@@ -41,21 +41,21 @@ export function BarraMovil() {
 /** Barra superior desde 960px: fija arriba, de vidrio */
 export function BarraDesktop({ superpuesta = false }: { superpuesta?: boolean }) {
   return (
-    <div className="nav-d" style={{ position: 'sticky', top: 0, zIndex: 30, padding: '14px 20px 0', marginBottom: superpuesta ? -78 : 0, pointerEvents: 'none' }}>
-      <header style={{ ...glass, pointerEvents: 'auto', maxWidth: 'var(--max)', margin: '0 auto', height: 64, padding: '0 10px 0 24px', borderRadius: 999, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
+    <div className="nav-d" style={{ position: 'sticky', top: 0, zIndex: 30, padding: '12px 20px 0', marginBottom: superpuesta ? -68 : 0, pointerEvents: 'none' }}>
+      <header style={{ ...glass, pointerEvents: 'auto', maxWidth: 'var(--max)', margin: '0 auto', height: 56, padding: '0 8px 0 20px', borderRadius: 999, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
         <Link to="/" aria-label="De Raíz, ir al inicio" style={{ display: 'flex', alignItems: 'center', minHeight: 44, flex: 'none' }}>
-          <img src={logo} alt="De Raíz" style={{ height: 32, width: 'auto' }} />
+          <img src={logo} alt="De Raíz" style={{ height: 26, width: 'auto' }} />
         </Link>
         <nav aria-label="Principal">
-          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', alignItems: 'center', gap: 4 }}>
+          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', alignItems: 'center', gap: 2 }}>
             {secciones.map((s) => (
               <li key={s.id}>
                 <NavLink
                   to={s.to}
                   end={s.to === '/'}
                   style={({ isActive }) => ({
-                    display: 'inline-flex', alignItems: 'center', minHeight: 44, padding: '0 16px', borderRadius: 999,
-                    fontSize: 15, textDecoration: 'none',
+                    display: 'inline-flex', alignItems: 'center', minHeight: 38, padding: '0 14px', borderRadius: 999,
+                    fontSize: 'var(--fs-sm)', textDecoration: 'none',
                     color: isActive ? 'var(--green-dark)' : '#2e4a3c',
                     fontWeight: isActive ? 500 : 400,
                     background: isActive ? 'rgba(47,161,84,.12)' : 'transparent'
@@ -77,20 +77,20 @@ export function BarraDesktop({ superpuesta = false }: { superpuesta?: boolean })
 export function Dock() {
   return (
     <div className="dock" style={{ position: 'sticky', bottom: 12, zIndex: 20, display: 'flex', justifyContent: 'center', padding: '0 12px 12px' }}>
-      <nav aria-label="Secciones" style={{ ...glass, width: 366, maxWidth: '100%', padding: 6, borderRadius: 999, display: 'flex', gap: 2, background: 'linear-gradient(180deg, rgba(255,255,255,.9), rgba(232,247,250,.72))' }}>
+      <nav aria-label="Secciones" style={{ ...glass, width: 340, maxWidth: '100%', padding: 5, borderRadius: 999, display: 'flex', gap: 2, background: 'linear-gradient(180deg, rgba(255,255,255,.9), rgba(232,247,250,.72))' }}>
         {secciones.map((s) => (
           <NavLink
             key={s.id}
             to={s.to}
             end={s.to === '/'}
             style={({ isActive }) => ({
-              flex: '1 1 0', minWidth: 0, minHeight: 56, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-              gap: 3, borderRadius: 999, textDecoration: 'none', fontSize: 11, letterSpacing: '.01em',
+              flex: '1 1 0', minWidth: 0, minHeight: 48, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+              gap: 2, borderRadius: 999, textDecoration: 'none', fontSize: 10.5, letterSpacing: '.01em',
               color: isActive ? 'var(--green-dark)' : '#4a6656',
               background: isActive ? 'rgba(47,161,84,.12)' : 'transparent'
             })}
           >
-            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={s.d} /></svg>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={s.d} /></svg>
             <span>{s.label}</span>
           </NavLink>
         ))}
@@ -100,12 +100,12 @@ export function Dock() {
 }
 
 export function Pie() {
-  const link: CSSProperties = { minHeight: 44, display: 'inline-flex', alignItems: 'center', color: 'var(--ink)', textDecoration: 'none' };
+  const link: CSSProperties = { minHeight: 36, display: 'inline-flex', alignItems: 'center', fontSize: 'var(--fs-sm)', color: 'var(--ink)', textDecoration: 'none' };
   return (
-    <footer style={{ borderTop: '1px solid rgba(16,48,31,.12)', padding: '40px 0 28px' }}>
+    <footer style={{ borderTop: '1px solid rgba(16,48,31,.12)', padding: '32px 0 24px' }}>
       <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 20, alignItems: 'center', justifyContent: 'space-between' }}>
-          <img src={logo} alt="De Raíz" style={{ height: 34, width: 'auto' }} />
+          <img src={logo} alt="De Raíz" style={{ height: 26, width: 'auto' }} />
           <nav aria-label="Pie de página" style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 20px' }}>
             <Link to="/kit" style={link}>Kit</Link>
             <Link to="/separa" style={link}>Separa</Link>
@@ -115,7 +115,7 @@ export function Pie() {
             <a href="https://tiktok.com/" style={link}>TikTok</a>
           </nav>
         </div>
-        <p className="small">© {new Date().getFullYear()} De Raíz · Hecho en la CDMX con lo que otros tiran.</p>
+        <p className="small">© {new Date().getFullYear()} De Raíz. Hecho en la CDMX con lo que otros tiran.</p>
       </div>
     </footer>
   );

@@ -10,12 +10,12 @@ import Nosotros from './pages/Nosotros';
 const NoEncontrada = lazy(() => import('./pages/NoEncontrada'));
 
 const titulos: Record<string, string> = {
-  '/': 'De Raíz · Kit universitario hecho con material rescatado',
-  '/kit': 'El kit · De Raíz',
-  '/preventa': 'Aparta tu kit · De Raíz',
-  '/separa': 'Separa bien · De Raíz',
-  '/ciclo': 'Cierra el ciclo · De Raíz',
-  '/nosotros': 'Nosotros · De Raíz'
+  '/': 'De Raíz | Kit universitario hecho con material rescatado',
+  '/kit': 'El kit | De Raíz',
+  '/preventa': 'Aparta tu kit | De Raíz',
+  '/separa': 'Separa bien | De Raíz',
+  '/ciclo': 'Cierra el ciclo | De Raíz',
+  '/nosotros': 'Nosotros | De Raíz'
 };
 
 function ScrollAlCambiar() {

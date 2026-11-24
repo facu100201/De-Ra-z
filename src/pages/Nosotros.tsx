@@ -12,7 +12,7 @@ const politicas = [
 ];
 
 const valores = (
-  <span style={{ paddingRight: 40 }}>
+  <span style={{ paddingRight: 28 }}>
     Sustentabilidad <span style={{ color: '#2FA154' }}>●</span> Creatividad <span style={{ color: '#D69A12' }}>●</span> Calidad <span style={{ color: '#0B6A86' }}>●</span> Responsabilidad{' '}
     <span style={{ color: '#5B3FC4' }}>●</span> Colaboración <span style={{ color: '#C2410C' }}>●</span> Conciencia <span style={{ color: '#5E8E12' }}>●</span>{' '}
   </span>
@@ -22,45 +22,45 @@ export default function Nosotros() {
   const [abierta, setAbierta] = useState(-1);
   return (
     <Pagina>
-      <section className="wrap" style={{ padding: '24px 20px 70px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '36px 56px' }}>
-        <div style={{ flex: '1 1 400px', display: 'flex', flexDirection: 'column', gap: 20 }}>
+      <section className="wrap" style={{ padding: '24px 20px var(--sp-section)', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '28px 56px' }}>
+        <div style={{ flex: '1 1 380px', display: 'flex', flexDirection: 'column', gap: 14 }}>
           <p className="ey">Nosotros</p>
-          <h1 className="display" style={{ fontSize: 'clamp(46px, 11vw, 88px)' }}>Empezamos mirando nuestra propia uni.</h1>
+          <h1 className="display">Empezamos mirando nuestra propia uni.</h1>
           <p className="lead">Veíamos productos que nadie usaba y material que se tiraba sin razón. Hicimos lo contrario: tres cosas que sí usas, con lo que otros desechan.</p>
         </div>
-        <div className="fl" style={{ flex: '0 1 300px', margin: '0 auto' }}>
-          <img src={logoCompleto} alt="Logotipo De Raíz: una R de la que crece un brote" style={{ width: '100%', maxWidth: 300, height: 'auto' }} />
+        <div className="fl" style={{ flex: '0 1 220px', margin: '0 auto' }}>
+          <img src={logoCompleto} alt="Logotipo De Raíz: una R de la que crece un brote" style={{ width: '100%', maxWidth: 220, height: 'auto' }} />
         </div>
       </section>
 
-      <section style={{ position: 'relative', maxWidth: 1100, margin: '0 auto', padding: '70px 20px 100px', textAlign: 'center' }}>
-        <div className="bub px" aria-hidden="true" style={{ '--p': '110px', width: 80, height: 80, left: '4%', top: 20 } as CSSProperties} />
-        <div className="bub px" aria-hidden="true" style={{ '--p': '50px', width: 34, height: 34, right: '10%', bottom: 40 } as CSSProperties} />
-        <p className="px" style={{ '--p': '30px', fontWeight: 500, fontSize: 'clamp(44px, 11vw, 104px)', lineHeight: 1, letterSpacing: '-.045em' } as CSSProperties}>
-          Nada nace para ser <span className="gt">basura.</span>
+      <section className="sec" style={{ position: 'relative', maxWidth: 900, margin: '0 auto', paddingLeft: 20, paddingRight: 20, paddingTop: 0, textAlign: 'center' }}>
+        <div className="bub px" aria-hidden="true" style={{ '--p': '70px', width: 48, height: 48, left: '4%', top: 0 } as CSSProperties} />
+        <div className="bub px" aria-hidden="true" style={{ '--p': '36px', width: 22, height: 22, right: '10%', bottom: 40 } as CSSProperties} />
+        <p className="px" style={{ '--p': '20px', fontWeight: 500, fontSize: 'clamp(30px, 6.6vw, 56px)', lineHeight: 1.05, letterSpacing: '-.04em' } as CSSProperties}>
+          Nada nace para ser basura.
         </p>
       </section>
 
-      <section className="wrap" style={{ padding: '0 20px 80px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px 48px' }}>
-        <div className="rv" style={{ padding: '22px 0', borderTop: '1px solid var(--line)' }}>
+      <section className="wrap" style={{ paddingBottom: 'var(--sp-section)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '8px 40px' }}>
+        <div className="rv" style={{ padding: '16px 0', borderTop: '1px solid var(--line)' }}>
           <p className="ey">Misión</p>
-          <p style={{ marginTop: 10, fontSize: 24, lineHeight: 1.25, letterSpacing: '-.02em' }}>Convertir lo que se tira en productos útiles para estudiantes, y que sepan de dónde viene cada material.</p>
+          <p className="body-lg" style={{ marginTop: 8, fontSize: 19 }}>Convertir lo que se tira en productos útiles para estudiantes, y que sepan de dónde viene cada material.</p>
         </div>
-        <div className="rv" style={{ padding: '22px 0', borderTop: '1px solid var(--line)' }}>
+        <div className="rv" style={{ padding: '16px 0', borderTop: '1px solid var(--line)' }}>
           <p className="ey" style={{ color: 'var(--aqua)' }}>Visión</p>
-          <p style={{ marginTop: 10, fontSize: 24, lineHeight: 1.25, letterSpacing: '-.02em' }}>Ser la marca escolar sustentable de las universidades de la CDMX. Elegida por su diseño.</p>
+          <p className="body-lg" style={{ marginTop: 8, fontSize: 19 }}>Ser la marca escolar sustentable de las universidades de la CDMX. Elegida por su diseño.</p>
         </div>
       </section>
 
       <div style={{ borderTop: '1px solid rgba(16,48,31,.12)', borderBottom: '1px solid rgba(16,48,31,.12)', overflow: 'hidden' }}>
         <h2 className="sr-only">Valores: sustentabilidad, creatividad, calidad, responsabilidad, colaboración y conciencia</h2>
-        <div className="mq" aria-hidden="true" style={{ display: 'flex', width: 'max-content', padding: '22px 0', fontSize: 'clamp(30px, 7vw, 48px)', letterSpacing: '-.03em', whiteSpace: 'nowrap', animationDuration: '36s' }}>
+        <div className="mq" aria-hidden="true" style={{ display: 'flex', width: 'max-content', padding: '14px 0', fontSize: 'clamp(20px, 4.4vw, 28px)', letterSpacing: '-.025em', whiteSpace: 'nowrap', animationDuration: '36s' }}>
           {valores}{valores}
         </div>
       </div>
 
-      <section id="politicas" style={{ maxWidth: 860, margin: '0 auto', padding: '90px 20px 110px', scrollMarginTop: 100 }}>
-        <h2 className="rv" style={{ fontSize: 'clamp(34px, 8vw, 56px)', lineHeight: 1, marginBottom: 24 }}>Políticas de compra.</h2>
+      <section id="politicas" className="sec" style={{ maxWidth: 760, margin: '0 auto', paddingLeft: 20, paddingRight: 20, scrollMarginTop: 90 }}>
+        <h2 className="h2 rv" style={{ marginBottom: 16 }}>Políticas de compra.</h2>
         <div style={{ borderBottom: '1px solid var(--line)' }}>
           {politicas.map((p, i) => {
             const open = abierta === i;
@@ -72,18 +72,18 @@ export default function Nosotros() {
                     aria-expanded={open}
                     aria-controls={`pol-${i}`}
                     onClick={() => setAbierta(open ? -1 : i)}
-                    style={{ width: '100%', minHeight: 64, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '14px 0', border: 0, background: 'transparent', cursor: 'pointer', textAlign: 'left', font: '500 18px/1.3 var(--font)', color: 'var(--ink)' }}
+                    style={{ width: '100%', minHeight: 52, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '10px 0', border: 0, background: 'transparent', cursor: 'pointer', textAlign: 'left', font: '500 var(--fs-md)/1.3 var(--font)', color: 'var(--ink)' }}
                   >
                     <span>{p.t}</span>
-                    <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A763C" strokeWidth="1.5" strokeLinecap="round" style={{ flex: 'none', transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .25s ease' }}><path d="M5 12h14M12 5v14" /></svg>
+                    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A763C" strokeWidth="1.5" strokeLinecap="round" style={{ flex: 'none', transform: open ? 'rotate(45deg)' : 'none', transition: 'transform .25s ease' }}><path d="M5 12h14M12 5v14" /></svg>
                   </button>
                 </h3>
-                {open && <p id={`pol-${i}`} className="inn" style={{ padding: '0 0 20px', fontSize: 16, lineHeight: 1.55, color: 'var(--ink-2)', maxWidth: 640 }}>{p.d}</p>}
+                {open && <p id={`pol-${i}`} className="inn" style={{ padding: '0 0 16px', fontSize: 'var(--fs-base)', lineHeight: 1.55, color: 'var(--ink-2)', maxWidth: 600 }}>{p.d}</p>}
               </div>
             );
           })}
         </div>
-        <div style={{ marginTop: 30 }}><a className="lk" href={`mailto:${CONTACTO}`}>¿Ya usas tu kit? Cuéntanos →</a></div>
+        <div style={{ marginTop: 22 }}><a className="lk" href={`mailto:${CONTACTO}`}>¿Ya usas tu kit? Cuéntanos</a></div>
       </section>
     </Pagina>
   );

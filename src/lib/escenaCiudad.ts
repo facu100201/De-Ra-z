@@ -155,7 +155,7 @@ export function crearCiudad(canvas: HTMLCanvasElement, root: HTMLElement): () =>
     g.fillStyle = r; g.fillRect(0, 0, w, w);
   });
   const sunSpr = new T.Sprite(new T.SpriteMaterial({ map: glowTex, blending: T.AdditiveBlending, depthWrite: false, fog: false }));
-  sunSpr.position.set(46, 52, -120); sunSpr.scale.set(34, 34, 1);
+  sunSpr.position.set(46, 52, -120); sunSpr.scale.set(24, 24, 1);
   scene.add(sunSpr);
 
   const cloudTex = tex(256, 128, (g) => {

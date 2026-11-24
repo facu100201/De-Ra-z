@@ -47,7 +47,7 @@ Variables opcionales del repo, en **Settings → Secrets and variables → Actio
 
 | Variable | Ejemplo |
 | --- | --- |
-| `VITE_PREVENTA_API` | `https://de-raiz-api.vercel.app/api/preventa` |
+| `VITE_PREVENTA_API` | `https://de-raiz-beta.vercel.app/api/preventa` |
 | `VITE_CONTACTO` | `hola@deraiz.mx` |
 
 ### API de correo → Vercel (plan gratis)

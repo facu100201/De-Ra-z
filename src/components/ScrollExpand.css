@@ -2,6 +2,7 @@
 .scroll-expand__track { position: relative; width: 100%; }
 
 .scroll-expand__stage {
+  background: var(--sage);
   position: sticky;
   top: 0;
   width: 100%;

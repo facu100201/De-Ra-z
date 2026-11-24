@@ -1,6 +1,6 @@
 :root {
   /* Paleta De Raíz: sacada del papel kraft, las hojas y el verde pistache */
-  --pistache: #eef2e3;
+  --pistache: #e8f0d9;
   --paper: #f8f9f2;
   --sage: #d5e3be;
   --leaf: #2f6b3a;
@@ -56,7 +56,7 @@ button { font-family: inherit; }
 
 .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding-left: 20px; padding-right: 20px; }
 .page { min-height: 100vh; overflow-x: clip; position: relative; }
-.page--sky { background: linear-gradient(180deg, #e3ebd0 0px, var(--pistache) 560px, var(--pistache) 100%); }
+.page--sky { background: linear-gradient(180deg, #dce8c8 0px, var(--pistache) 560px, var(--pistache) 100%); }
 /* Separación bajo la barra fija en desktop */
 @media (min-width: 960px) { .page:not(.page--flush) main { padding-top: 28px; } }
 

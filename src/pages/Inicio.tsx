@@ -2,7 +2,7 @@ import type { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import Arte, { type Pieza } from '../components/Arte';
 import Marquee from '../components/Marquee';
-import { Pagina } from '../components/Navegacion';
+import { BarraMovil, Pagina } from '../components/Navegacion';
 import ScrollExpand from '../components/ScrollExpand';
 
 const piezas: { id: Pieza; nombre: string; sub: string; delay: string }[] = [
@@ -33,11 +33,11 @@ const bub = (s: CSSProperties & { '--p'?: string }) => <div className="bub px" a
 
 export default function Inicio() {
   return (
-    <Pagina sky={false} flush>
+    <Pagina sky={false} flush barraEnHero>
+      <div className="nav-m" style={{ background: 'var(--sage)' }}><BarraMovil /></div>
       <ScrollExpand
         src={`${import.meta.env.BASE_URL}hero.webp`}
         alt="Bolsa de papel kraft, hojas verdes, frascos de vidrio ámbar y un sobre sobre un fondo verde claro"
-        scrollHint="Desliza para abrir"
         title={<h1 className="display" style={{ maxWidth: 640 }}>Lo que tiras puede tener una segunda vida.</h1>}
       >
         <p className="ey" style={{ color: 'var(--leaf-dark)' }}>Kit universitario, hecho en la CDMX</p>

@@ -6,7 +6,7 @@ type Bote = 'org' | 'rec' | 'nor';
 
 const items: { name: string; bin: Bote; why: string }[] = [
   { name: 'Cáscara de naranja', bin: 'org', why: 'Restos de comida: al verde, y terminan como composta.' },
-  { name: 'Botella de PET', bin: 'rec', why: 'Vacíala, aplástala y al gris.' },
+  { name: 'Botella de PET', bin: 'rec', why: 'Vacíala, aplástala y al gris. Con botellas así hicimos el filamento de nuestra base para laptop.' },
   { name: 'Retazo de tela', bin: 'rec', why: 'Los textiles van al gris. Y si es algodón o mezclilla, nos sirve para una tote.' },
   { name: 'Bolsa de papitas', bin: 'nor', why: 'Es multicapa metalizada: casi nadie la recicla. Al naranja.' },
   { name: 'Caja de cartón', bin: 'rec', why: 'Seca y doblada, al gris. La parte con grasa ya no sirve.' },

@@ -46,7 +46,7 @@ export function construirCorreo({ email, nombre, universidad, sitio }: DatosCorr
       ${p('Estás contemplado para recibir tu kit en cuanto comience su producción. Antes de fabricar te escribiremos para confirmar tu pedido y la entrega en tu campus.')}
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 24px;border-top:1px solid #DDE9E1;border-bottom:1px solid #DDE9E1;">
         ${fila('Tote', 'pantalón y playera reutilizados', false)}
-        ${fila('Base para laptop', 'plástico y fibra reciclados', true)}
+        ${fila('Base para laptop', 'filamento de botellas recicladas', true)}
         ${fila('Libreta', 'hojas recicladas engargoladas', true)}
       </table>
       ${p('Tu registro nos dice cuántos kits fabricar, así no producimos de más ni desperdiciamos material. Gracias por ayudar a que lo que se tira tenga una segunda vida.')}

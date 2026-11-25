@@ -2,7 +2,7 @@ export type Pieza = 'tote' | 'base' | 'libreta';
 
 const etiquetas: Record<Pieza, string> = {
   tote: 'Tote hecha con un pantalón azul marino reutilizado y correa de tela de playera gris',
-  base: 'Soporte para laptop impreso en 3D en blanco, con mecanismo de tijera y niveles de altura',
+  base: 'Soporte para laptop impreso en 3D con filamento de botellas recicladas, con mecanismo de tijera y niveles de altura',
   libreta: 'Libreta de hojas de papel reciclado engargoladas'
 };
 

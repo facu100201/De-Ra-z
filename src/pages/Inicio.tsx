@@ -7,7 +7,7 @@ import ScrollExpand from '../components/ScrollExpand';
 
 const piezas: { id: Pieza; nombre: string; sub: string; delay: string }[] = [
   { id: 'tote', nombre: 'Tote', sub: 'Pantalón y playera reutilizados', delay: '0s' },
-  { id: 'base', nombre: 'Base para laptop', sub: 'Plástico y fibra reciclados', delay: '-2s' },
+  { id: 'base', nombre: 'Base para laptop', sub: 'Filamento de botellas recicladas', delay: '-2s' },
   { id: 'libreta', nombre: 'Libreta', sub: 'Hojas recicladas engargoladas', delay: '-4s' }
 ];
 
@@ -21,7 +21,7 @@ const pasos = [
 const materiales = [
   ['Ropa usada', 'Tote bag'],
   ['Papel', 'Libreta'],
-  ['Plástico', 'Base laptop']
+  ['Botellas de PET', 'Base laptop']
 ].map(([de, a]) => (
   <>
     {de} <span style={{ color: 'var(--green)' }}>→ {a}</span>
@@ -49,7 +49,7 @@ export default function Inicio() {
 
       <Marquee
         items={materiales}
-        label="La ropa usada se vuelve tote bag; el papel, libreta; el plástico, base para laptop."
+        label="La ropa usada se vuelve tote bag; el papel, libreta; las botellas de PET, base para laptop."
         duration={60}
         repeat={6}
         style={{ background: 'var(--paper)', padding: '12px 0', fontSize: 17, letterSpacing: '-.01em' }}

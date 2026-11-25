@@ -5,7 +5,7 @@ import { Pagina } from '../components/Navegacion';
 
 const data: Record<Pieza, { label: string; badge: string; name: string; desc: string; mat: string; evita: string; fin: string }> = {
   tote: { label: 'Tote', badge: 'Pieza única', name: 'Tote', desc: 'Hecha con un pantalón que ya nadie usaba: conserva sus bolsillos, presillas y botón. La correa es tela de playera.', mat: 'Pantalón y playera de algodón reutilizados', evita: 'Que la ropa en buen estado termine en la basura', fin: 'Nos la regresas y su tela se vuelve a usar' },
-  base: { label: 'Base', badge: 'Se arma sin pegamento', name: 'Base para laptop', desc: 'Sube tu pantalla, cuida tu cuello y deja respirar a tu compu. Viaja plana en la mochila.', mat: 'Plástico y fibra reciclados', evita: 'Una base nueva de plástico virgen', fin: 'Se desarma y cada parte se recicla aparte' },
+  base: { label: 'Base', badge: 'Se arma sin pegamento', name: 'Base para laptop', desc: 'Impresa en 3D con filamento hecho de botellas recicladas. Sube tu pantalla, cuida tu cuello y deja respirar a tu compu.', mat: 'Filamento de botellas de PET recicladas', evita: 'Que esas botellas terminen en la basura y usar plástico nuevo', fin: 'Se desarma y cada parte se recicla aparte' },
   libreta: { label: 'Libreta', badge: 'Se recicla completa', name: 'Libreta', desc: 'Hojas de papel reciclado engargoladas, para tus apuntes de todos los días.', mat: 'Hojas de papel reciclado y engargolado', evita: 'Papel de fibra virgen', fin: 'Quitas el engargolado y las hojas van a reciclaje' }
 };
 const ids: Pieza[] = ['tote', 'base', 'libreta'];

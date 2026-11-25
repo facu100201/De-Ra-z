@@ -34,7 +34,7 @@ const bub = (s: CSSProperties & { '--p'?: string }) => <div className="bub px" a
 export default function Inicio() {
   return (
     <Pagina sky={false} flush barraEnHero>
-      <div className="nav-m" style={{ background: 'var(--sage)' }}><BarraMovil /></div>
+      <div className="nav-m" style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 5 }}><BarraMovil /></div>
       <ScrollExpand
         src={`${import.meta.env.BASE_URL}hero.webp`}
         alt="Bolsa de papel kraft, hojas verdes, frascos de vidrio ámbar y un sobre sobre un fondo verde claro"

@@ -17,6 +17,8 @@
   will-change: clip-path;
 }
 
+.scroll-expand__picture { display: contents; }
+
 .scroll-expand__media {
   position: absolute;
   inset: 0;

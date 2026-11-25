@@ -18,6 +18,8 @@ const smoothstep = (e0: number, e1: number, x: number) => {
 
 type Props = {
   src: string;
+  /** Versión vertical de la imagen para pantallas angostas (teléfono en vertical) */
+  srcPortrait?: string;
   alt: string;
   title?: ReactNode;
   scrollHint?: string;
@@ -40,6 +42,7 @@ type Props = {
 
 export default function ScrollExpand({
   src,
+  srcPortrait,
   alt,
   title,
   scrollHint,
@@ -146,7 +149,10 @@ export default function ScrollExpand({
     <div ref={trackRef} className="scroll-expand__track">
       <div ref={stageRef} className="scroll-expand__stage">
         <div ref={frameRef} className="scroll-expand__frame">
-          <img ref={mediaRef} className="scroll-expand__media" src={src} alt={alt} draggable={false} fetchPriority="high" />
+          <picture className="scroll-expand__picture">
+            {srcPortrait && <source media="(max-aspect-ratio: 4/5)" srcSet={srcPortrait} />}
+            <img ref={mediaRef} className="scroll-expand__media" src={src} alt={alt} draggable={false} fetchPriority="high" />
+          </picture>
           <div ref={scrimRef} className="scroll-expand__scrim" />
           {children && <div ref={overlayRef} className="scroll-expand__overlay">{children}</div>}
         </div>

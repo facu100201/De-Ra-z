@@ -36,6 +36,7 @@ export default function Inicio() {
       <div className="nav-m" style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 5 }}><BarraMovil /></div>
       <ScrollExpand
         src={`${import.meta.env.BASE_URL}hero.webp`}
+        srcPortrait={`${import.meta.env.BASE_URL}hero-movil.webp`}
         alt="Bolsa de papel kraft, hojas verdes, frascos de vidrio ámbar y un sobre sobre un fondo verde claro"
         title={<h1 className="display" style={{ maxWidth: 640 }}>Lo que tiras puede tener una segunda vida.</h1>}
       >

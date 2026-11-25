@@ -9,7 +9,7 @@ const politicas = [
   { t: 'Calidad y resistencia', d: 'Costuras reforzadas en las totes y ensamble firme en las bases, pensados para computadora, cuadernos, termo y cables. Si algo se afloja, primero lo reparamos.' },
   { t: 'Producción local y ética', d: 'Diseñamos y confeccionamos en México, con condiciones de trabajo dignas y el mínimo de químicos, tintes agresivos y agua.' },
   { t: 'Cierra el ciclo', d: 'Al final de su vida útil, regrésanos tu producto. Separamos sus partes para reciclarlas y te damos un descuento en tu siguiente kit.' },
-  { t: 'Aviso de privacidad', d: 'En la preventa solo pedimos tu correo institucional. Lo usamos para confirmarte tu registro y avisarte cuando arranque la producción; no lo compartimos ni lo vendemos. Si quieres que lo borremos, escríbenos y lo eliminamos.' }
+  { t: 'Aviso de privacidad', d: 'Este sitio no te pide datos personales. Si nos escribes, usamos tu correo solo para responderte; no lo compartimos ni lo vendemos, y si quieres que lo borremos, lo eliminamos.' }
 ];
 
 const valores = [

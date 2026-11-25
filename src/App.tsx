@@ -2,7 +2,6 @@ import { lazy, Suspense, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Inicio from './pages/Inicio';
 import Kit from './pages/Kit';
-import Preventa from './pages/Preventa';
 import Separa from './pages/Separa';
 import Ciclo from './pages/Ciclo';
 import Nosotros from './pages/Nosotros';
@@ -12,7 +11,6 @@ const NoEncontrada = lazy(() => import('./pages/NoEncontrada'));
 const titulos: Record<string, string> = {
   '/': 'De Raíz | Kit universitario hecho con material rescatado',
   '/kit': 'El kit | De Raíz',
-  '/preventa': 'Aparta tu kit | De Raíz',
   '/separa': 'Separa bien | De Raíz',
   '/ciclo': 'Cierra el ciclo | De Raíz',
   '/nosotros': 'Nosotros | De Raíz'
@@ -38,7 +36,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/kit" element={<Kit />} />
-        <Route path="/preventa" element={<Preventa />} />
         <Route path="/separa" element={<Separa />} />
         <Route path="/ciclo" element={<Ciclo />} />
         <Route path="/nosotros" element={<Nosotros />} />

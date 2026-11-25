@@ -42,8 +42,8 @@ export default function Inicio() {
         <p className="ey" style={{ color: 'var(--leaf-dark)' }}>Kit universitario, hecho en la CDMX</p>
         <h2 className="h2" style={{ maxWidth: 560, marginTop: 12 }}>Tote, base para laptop y libreta, hechas con material rescatado.</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 18, marginTop: 24 }}>
-          <Link className="btn" to="/preventa">Aparta tu kit</Link>
-          <Link className="lk" to="/kit">Ver el kit</Link>
+          <Link className="btn" to="/kit">Ver el kit</Link>
+          <Link className="lk" to="/separa">Aprende a separar</Link>
         </div>
       </ScrollExpand>
 
@@ -93,13 +93,6 @@ export default function Inicio() {
           <Link className="lk" to="/ciclo">Cómo cerramos el ciclo</Link>
           <Link className="lk" to="/separa">Aprende a separar</Link>
         </div>
-      </section>
-
-      <section className="wrap sec" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, textAlign: 'center' }}>
-        {bub({ '--p': '70px', width: 72, height: 72, left: 0, top: 30 })}
-        <h2 className="display rv">Aparta el tuyo.</h2>
-        <p style={{ fontSize: 'var(--fs-md)', color: 'var(--ink-2)', marginBottom: 6 }}>Solo con tu correo institucional. Sin pagar nada hoy.</p>
-        <Link className="btn" to="/preventa">Ir a la preventa</Link>
       </section>
     </Pagina>
   );

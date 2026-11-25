@@ -23,7 +23,7 @@ const glass: CSSProperties = {
   WebkitBackdropFilter: 'blur(18px) saturate(1.3)'
 };
 
-/** Barra superior en móvil: logo + Nosotros + Preventa */
+/** Barra superior en móvil: logo + Nosotros */
 export function BarraMovil() {
   return (
     <header className="nav-m wrap" style={{ paddingTop: 10, paddingBottom: 10, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, position: 'relative', zIndex: 2 }}>
@@ -32,7 +32,6 @@ export function BarraMovil() {
       </Link>
       <nav aria-label="Principal" style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
         <Link to="/nosotros" style={{ display: 'inline-flex', alignItems: 'center', minHeight: 40, padding: '0 10px', fontSize: 'var(--fs-sm)', color: 'var(--ink)', textDecoration: 'none' }}>Nosotros</Link>
-        <Link to="/preventa" className="btn btn--sm">Preventa</Link>
       </nav>
     </header>
   );
@@ -42,7 +41,7 @@ export function BarraMovil() {
 export function BarraDesktop({ superpuesta = false }: { superpuesta?: boolean }) {
   return (
     <div className="nav-d" style={{ position: 'sticky', top: 0, zIndex: 30, padding: '12px 20px 0', marginBottom: superpuesta ? -68 : 0, pointerEvents: 'none' }}>
-      <header style={{ ...glass, pointerEvents: 'auto', maxWidth: 'var(--max)', margin: '0 auto', height: 56, padding: '0 8px 0 20px', borderRadius: 999, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
+      <header style={{ ...glass, pointerEvents: 'auto', maxWidth: 'var(--max)', margin: '0 auto', height: 56, padding: '0 10px 0 20px', borderRadius: 999, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
         <Link to="/" aria-label="De Raíz, ir al inicio" style={{ display: 'flex', alignItems: 'center', minHeight: 44, flex: 'none' }}>
           <img src={logo} alt="De Raíz" style={{ height: 26, width: 'auto' }} />
         </Link>
@@ -67,7 +66,6 @@ export function BarraDesktop({ superpuesta = false }: { superpuesta?: boolean })
             ))}
           </ul>
         </nav>
-        <Link to="/preventa" className="btn btn--sm" style={{ flex: 'none' }}>Aparta tu kit</Link>
       </header>
     </div>
   );

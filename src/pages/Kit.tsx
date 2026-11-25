@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import Arte, { type Pieza } from '../components/Arte';
 import { Pagina } from '../components/Navegacion';
 
@@ -56,10 +56,6 @@ export default function Kit() {
             <div style={row}><dt style={dt}>Evita</dt><dd style={{ margin: 0 }}>{p.evita}</dd></div>
             <div style={row}><dt style={dt}>Al final</dt><dd style={{ margin: 0 }}>{p.fin}</dd></div>
           </dl>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14, marginTop: 6 }}>
-            <Link className="btn" to="/preventa">Apartar</Link>
-            <span style={{ fontSize: 'var(--fs-sm)', color: 'var(--ink-3)' }}>Preventa sin pago, solo con tu correo institucional</span>
-          </div>
         </div>
       </section>
 

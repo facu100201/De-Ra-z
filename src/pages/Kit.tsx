@@ -4,9 +4,9 @@ import Arte, { type Pieza } from '../components/Arte';
 import { Pagina } from '../components/Navegacion';
 
 const data: Record<Pieza, { label: string; badge: string; name: string; desc: string; mat: string; evita: string; fin: string }> = {
-  tote: { label: 'Tote', badge: 'Pieza única', name: 'Tote patchwork', desc: 'Retazos que los talleres desechan, cosidos en patchwork. No hay dos iguales.', mat: 'Algodón y mezclilla recuperados', evita: 'Que las mermas textiles lleguen a la basura', fin: 'Nos la regresas y sus telas se vuelven a usar' },
+  tote: { label: 'Tote', badge: 'Pieza única', name: 'Tote', desc: 'Hecha con un pantalón que ya nadie usaba: conserva sus bolsillos, presillas y botón. La correa es tela de playera.', mat: 'Pantalón y playera de algodón reutilizados', evita: 'Que la ropa en buen estado termine en la basura', fin: 'Nos la regresas y su tela se vuelve a usar' },
   base: { label: 'Base', badge: 'Se arma sin pegamento', name: 'Base para laptop', desc: 'Sube tu pantalla, cuida tu cuello y deja respirar a tu compu. Viaja plana en la mochila.', mat: 'Plástico y fibra reciclados', evita: 'Una base nueva de plástico virgen', fin: 'Se desarma y cada parte se recicla aparte' },
-  libreta: { label: 'Libreta', badge: 'Se recicla completa', name: 'Libreta', desc: 'Para tus apuntes de todos los días, con papel y cartón reciclados.', mat: 'Papel posconsumo y pastas de cartón', evita: 'Papel de fibra virgen', fin: 'Separas pastas y hojas: todo se recicla' }
+  libreta: { label: 'Libreta', badge: 'Se recicla completa', name: 'Libreta', desc: 'Hojas de papel reciclado engargoladas, para tus apuntes de todos los días.', mat: 'Hojas de papel reciclado y engargolado', evita: 'Papel de fibra virgen', fin: 'Quitas el engargolado y las hojas van a reciclaje' }
 };
 const ids: Pieza[] = ['tote', 'base', 'libreta'];
 
@@ -42,7 +42,7 @@ export default function Kit() {
 
       <section className="wrap" style={{ padding: '16px 20px var(--sp-section)', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '16px 48px' }}>
         <div style={{ flex: '1 1 300px', position: 'relative', display: 'flex', justifyContent: 'center', padding: '16px 0' }}>
-          <div aria-hidden="true" style={{ position: 'absolute', left: '50%', top: '50%', width: 'min(80%, 340px)', aspectRatio: '1', transform: 'translate(-50%, -50%)', borderRadius: '50%', background: 'radial-gradient(circle at 34% 26%, #FFFFFF 0 10%, #EEF2E3 40%, #D5E3BE 78%, #C3D6A4 100%)', boxShadow: 'inset 0 -18px 36px rgba(47,107,58,.14), 0 30px 60px rgba(47,107,58,.14)' }} />
+          <div aria-hidden="true" style={{ position: 'absolute', left: '50%', top: '50%', width: 'min(80%, 340px)', aspectRatio: '1', transform: 'translate(-50%, -50%)', borderRadius: '50%', background: 'radial-gradient(circle at 34% 26%, #EEF3E2 0 8%, #D5E3BE 42%, #BFD39F 80%, #AEC68A 100%)', boxShadow: 'inset 0 -18px 36px rgba(47,107,58,.14), 0 30px 60px rgba(47,107,58,.14)' }} />
           <div className="bub px" aria-hidden="true" style={{ '--p': '50px', width: 38, height: 38, left: '6%', top: '6%' } as CSSProperties} />
           <div className="bub px" aria-hidden="true" style={{ '--p': '90px', width: 22, height: 22, right: '10%', bottom: '14%' } as CSSProperties} />
           <div key={sel} className="fl inn" style={{ position: 'relative', width: 'min(58%, 260px)' }}><Arte pieza={sel} /></div>

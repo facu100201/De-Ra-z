@@ -5,7 +5,7 @@ import { logoCompleto, Pagina } from '../components/Navegacion';
 const CONTACTO = import.meta.env.VITE_CONTACTO ?? 'hola@deraiz.mx';
 
 const politicas = [
-  { t: 'Piezas únicas', d: 'Usamos textiles, plásticos y cartón recuperados en México. Cada pieza puede variar en textura, tono o patrón: no es defecto, es la marca del material rescatado.' },
+  { t: 'Piezas únicas', d: 'Usamos ropa, papel y plástico recuperados en México. Cada pieza puede variar en textura, tono o patrón: no es defecto, es la marca del material rescatado.' },
   { t: 'Calidad y resistencia', d: 'Costuras reforzadas en las totes y ensamble firme en las bases, pensados para computadora, cuadernos, termo y cables. Si algo se afloja, primero lo reparamos.' },
   { t: 'Producción local y ética', d: 'Diseñamos y confeccionamos en México, con condiciones de trabajo dignas y el mínimo de químicos, tintes agresivos y agua.' },
   { t: 'Cierra el ciclo', d: 'Al final de su vida útil, regrésanos tu producto. Separamos sus partes para reciclarlas y te damos un descuento en tu siguiente kit.' },

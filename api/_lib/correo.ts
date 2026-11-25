@@ -45,9 +45,9 @@ export function construirCorreo({ email, nombre, universidad, sitio }: DatosCorr
       ${p(`Gracias por contribuir a De Raíz${esc(desde)}. Tu correo <strong style="color:#10301F;">${esc(email)}</strong> quedó registrado en la preventa.`)}
       ${p('Estás contemplado para recibir tu kit en cuanto comience su producción. Antes de fabricar te escribiremos para confirmar tu pedido y la entrega en tu campus.')}
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:6px 0 24px;border-top:1px solid #DDE9E1;border-bottom:1px solid #DDE9E1;">
-        ${fila('Tote patchwork', 'retazos de mezclilla y algodón', false)}
+        ${fila('Tote', 'pantalón y playera reutilizados', false)}
         ${fila('Base para laptop', 'plástico y fibra reciclados', true)}
-        ${fila('Libreta', 'papel posconsumo y cartón', true)}
+        ${fila('Libreta', 'hojas recicladas engargoladas', true)}
       </table>
       ${p('Tu registro nos dice cuántos kits fabricar, así no producimos de más ni desperdiciamos material. Gracias por ayudar a que lo que se tira tenga una segunda vida.')}
       <table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 26px;"><tr><td style="border-radius:999px;background:#1A763C;">
@@ -69,7 +69,7 @@ export function construirCorreo({ email, nombre, universidad, sitio }: DatosCorr
     '',
     'Estás contemplado para recibir tu kit en cuanto comience su producción. Antes de fabricar te escribiremos para confirmar tu pedido y la entrega en tu campus.',
     '',
-    'Tu kit: tote patchwork, base para laptop y libreta, hechas con material rescatado.',
+    'Tu kit: tote, base para laptop y libreta, hechas con material rescatado.',
     '',
     'Tu registro nos dice cuántos kits fabricar, así no producimos de más ni desperdiciamos material.',
     '',

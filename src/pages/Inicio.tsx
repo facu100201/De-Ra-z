@@ -6,9 +6,9 @@ import { BarraMovil, Pagina } from '../components/Navegacion';
 import ScrollExpand from '../components/ScrollExpand';
 
 const piezas: { id: Pieza; nombre: string; sub: string; delay: string }[] = [
-  { id: 'tote', nombre: 'Tote patchwork', sub: 'Retazos de mezclilla y algodón', delay: '0s' },
+  { id: 'tote', nombre: 'Tote', sub: 'Pantalón y playera reutilizados', delay: '0s' },
   { id: 'base', nombre: 'Base para laptop', sub: 'Plástico y fibra reciclados', delay: '-2s' },
-  { id: 'libreta', nombre: 'Libreta', sub: 'Papel posconsumo y cartón', delay: '-4s' }
+  { id: 'libreta', nombre: 'Libreta', sub: 'Hojas recicladas engargoladas', delay: '-4s' }
 ];
 
 const pasos = [
@@ -19,8 +19,7 @@ const pasos = [
 ];
 
 const materiales = [
-  ['Retazos', 'Tote bag'],
-  ['Cartón', 'Pastas'],
+  ['Ropa usada', 'Tote bag'],
   ['Papel', 'Libreta'],
   ['Plástico', 'Base laptop']
 ].map(([de, a]) => (
@@ -50,7 +49,7 @@ export default function Inicio() {
 
       <Marquee
         items={materiales}
-        label="Retazos se vuelven tote bag; cartón, pastas; papel, libreta; plástico, base para laptop."
+        label="La ropa usada se vuelve tote bag; el papel, libreta; el plástico, base para laptop."
         duration={60}
         repeat={6}
         style={{ background: 'var(--paper)', padding: '12px 0', fontSize: 17, letterSpacing: '-.01em' }}

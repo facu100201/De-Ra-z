@@ -5,10 +5,10 @@ import { Pagina } from '../components/Navegacion';
 const CONTACTO = import.meta.env.VITE_CONTACTO ?? 'hola@deraiz.mx';
 
 const nodos = [
-  { t: 'Separas', left: '50%', top: 38, bg: 'radial-gradient(circle at 35% 28%, #A9CF8F, #2F6B3A 70%)' },
-  { t: 'Recupe­ramos', left: 202, top: '50%', bg: 'radial-gradient(circle at 35% 28%, #E2C9A6, #8A6236 70%)' },
-  { t: 'Transfor­mamos', left: '50%', top: 202, bg: 'radial-gradient(circle at 35% 28%, #F0C38E, #A4561A 70%)' },
-  { t: 'Regresas', left: 38, top: '50%', bg: 'radial-gradient(circle at 35% 28%, #C9D7A8, #5E7A3A 70%)' }
+  { t: 'Separas', left: '50%', top: '15.8%', bg: 'radial-gradient(circle at 35% 28%, #A9CF8F, #2F6B3A 70%)' },
+  { t: 'Recupe­ramos', left: '84.2%', top: '50%', bg: 'radial-gradient(circle at 35% 28%, #E2C9A6, #8A6236 70%)' },
+  { t: 'Transfor­mamos', left: '50%', top: '84.2%', bg: 'radial-gradient(circle at 35% 28%, #F0C38E, #A4561A 70%)' },
+  { t: 'Regresas', left: '15.8%', top: '50%', bg: 'radial-gradient(circle at 35% 28%, #C9D7A8, #5E7A3A 70%)' }
 ];
 
 const pasos = [
@@ -27,13 +27,13 @@ export default function Ciclo() {
           <h1 className="display">Nada debería terminar en la basura.</h1>
           <p className="lead" style={{ maxWidth: 380 }}>Regrésanos tu kit al final de su vida y te damos un descuento en el siguiente.</p>
         </div>
-        <div style={{ flex: '1 1 260px', display: 'flex', justifyContent: 'center' }}>
-          <div aria-hidden="true" style={{ position: 'relative', width: 240, height: 240 }}>
-            <div style={{ position: 'absolute', inset: 34, borderRadius: '50%', border: '2px dashed rgba(47,107,58,.3)' }} />
-            <div className="fl" style={{ position: 'absolute', left: '50%', top: '50%', width: 88, margin: '-44px 0 0 -44px' }}><Arte pieza="tote" decorativa /></div>
+        <div style={{ flex: '1 1 380px', display: 'flex', justifyContent: 'center' }}>
+          <div aria-hidden="true" style={{ position: 'relative', width: 'min(100%, 480px)', aspectRatio: '1', containerType: 'inline-size' }}>
+            <div style={{ position: 'absolute', inset: '14.2%', borderRadius: '50%', border: '2px dashed rgba(47,107,58,.3)' }} />
+            <div className="fl" style={{ position: 'absolute', left: '31.6%', top: '31.6%', width: '36.8%' }}><Arte pieza="tote" decorativa /></div>
             <div className="sp" style={{ position: 'absolute', inset: 0 }}>
               {nodos.map((n) => (
-                <div key={n.t} className="node" style={{ position: 'absolute', left: n.left, top: n.top, width: 68, height: 68, margin: '-34px 0 0 -34px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', fontSize: 10.5, fontWeight: 500, lineHeight: 1.1, color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,.35)', background: n.bg, boxShadow: 'inset 0 -6px 10px rgba(0,0,0,.2), inset 0 5px 7px rgba(255,255,255,.5), 0 8px 16px rgba(28,46,34,.2)' }}>
+                <div key={n.t} className="node" style={{ position: 'absolute', left: n.left, top: n.top, width: '28.4%', aspectRatio: '1', transform: 'translate(-50%, -50%)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 6%', textAlign: 'center', fontSize: 'clamp(11px, 3.5cqw, 16px)', fontWeight: 500, lineHeight: 1.1, color: '#fff', textShadow: '0 1px 2px rgba(0,0,0,.35)', background: n.bg, boxShadow: 'inset 0 -10px 16px rgba(0,0,0,.2), inset 0 8px 12px rgba(255,255,255,.5), 0 14px 28px rgba(28,46,34,.22)' }}>
                   <span>{n.t}</span>
                 </div>
               ))}

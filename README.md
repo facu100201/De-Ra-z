@@ -9,7 +9,7 @@ Sitio público de **De Raíz**: un kit universitario hecho con material rescatad
 - **Una sola app responsiva**, mobile first. Debajo de 960 px hay un dock de navegación abajo y desde 960 px una barra de vidrio fija arriba.
 - **Inicio** con un hero que se expande al hacer scroll (adaptado de Scroll Expand de React Bits, MIT + Commons Clause).
 - **El kit**: las tres piezas con material, qué residuo evitan y qué pasa con ellas al final.
-- **Separa bien**: mini juego para aprender a separar residuos según la NADF-024 de la CDMX.
+- **Separa bien**: juego tipo tetris. Caen 12 residuos cada vez más rápido y los llevas a su bote (orgánico, reciclable o no reciclable, según la NADF-024 de la CDMX) con flechas, deslizando o con el control en pantalla. Al final da tu puntaje, tu récord y repasa los que fallaste.
 - **Cierra el ciclo** y **Nosotros**, con las políticas de compra y el aviso de privacidad.
 
 ## Stack
@@ -19,6 +19,7 @@ React 19, TypeScript, Vite 6 y React Router 7. Es un sitio 100 % estático: no t
 ```
 src/
   components/   Navegacion (barra, dock, pie), Arte, Marquee, ScrollExpand
+  components/juego/  JuegoSepara (bucle con requestAnimationFrame), dibujos de residuos y botes
   pages/        Inicio, Kit, Separa, Ciclo, Nosotros
 ```
 
